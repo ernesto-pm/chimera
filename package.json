@@ -2,10 +2,15 @@
   "name": "chimera",
   "version": "0.0.1",
   "description": "This is the server logic of Chimera",
-  "main": "ecosystem.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ErnestoPM",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.11"
+  }
 }
