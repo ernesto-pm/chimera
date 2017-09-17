@@ -1,3 +1,4 @@
+require('dotenv').config();
 const CONFIG = Symbol.for("config");
 
 var globalSymbols = Object.getOwnPropertySymbols(global);
@@ -7,9 +8,10 @@ if(!hasConfig) {
     global[CONFIG] = {
         databaseName: process.env.databaseName || "chimera",
         databaseHost: process.env.databaseHost || "localhost",
-        databaseUser: process.env.databaseUser || "root",
+        databaseUser: process.env.databaseUser || "",
         databasePass: process.env.databasePass || "",
-        databasePort: process.env.databasePort || 27017
+        databasePort: process.env.databasePort || 27017,
+        port:         process.env.PORT         || 8016
     };
 }
 

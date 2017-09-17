@@ -3,13 +3,26 @@ const Schema        = mongoose.Schema;
 
 const VisitSchema = new mongoose.Schema({
     date: {
-        type: Date
+        type: Date,
+        required: true
     },
     from: {
-        type: String
+        type: String,
+        required: true
     },
-    urlVisited: {
-        type: String
+    visitedURL: {
+        type: String,
+        required: true
+    },
+    wasFrontend: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
+    geoip : {
+        type: Object,
+        required: false,
+        default: {}
     }
 },{
     timestamps: true
